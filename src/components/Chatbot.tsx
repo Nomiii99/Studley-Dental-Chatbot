@@ -12,7 +12,7 @@ type Message = {
 };
 
 const SERVICES = [
-  { label: '✓ Book Online', value: 'book_online', redirect: 'https://booking.uk.hsone.app/soe/new/%20?pid=UKDME01' },
+  { label: 'Book Online', value: 'book_online', redirect: 'https://booking.uk.hsone.app/soe/new/%20?pid=UKDME01' },
   { label: 'Dental Emergency', value: 'Dental Emergency' },
   { label: 'Dental Exam', value: 'Dental Exam' },
   { label: 'Dental Implants', value: 'Dental Implants' },
@@ -171,7 +171,7 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             className={cn(
-              "bg-white flex flex-col overflow-hidden z-50 border border-slate-100",
+              "bg-[#1D1D1D] flex flex-col overflow-hidden z-50 border border-white/10",
               isEmbedded 
                 ? "w-full h-full rounded-none" 
                 : "fixed bottom-24 right-6 w-[400px] max-w-[calc(100vw-48px)] h-[600px] max-h-[calc(100vh-120px)] rounded-2xl shadow-2xl"
@@ -180,14 +180,14 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
             {/* Header */}
             <div className="bg-brand-primary p-4 text-white flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-brand-primary font-bold text-lg border-2 border-white/20">
+                <div className="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white font-bold text-lg border-2 border-white/20">
                   S
                 </div>
                 <div>
                   <h3 className="font-serif text-lg leading-tight">Sara</h3>
                   <p className="text-xs text-white/70 flex items-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    Online | Studley Dental
+                    Studley Dental & Implant clinic
                   </p>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
             </div>
 
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#faf9f6]">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#1D1D1D]">
               {messages.map((msg) => (
                 <div
                   key={msg.id}
@@ -217,8 +217,8 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
                       className={cn(
                         "p-3 rounded-2xl text-sm shadow-sm",
                         msg.sender === 'user' 
-                          ? "bg-brand-primary text-white rounded-tr-none" 
-                          : "bg-white text-slate-800 rounded-tl-none border border-slate-100"
+                          ? "bg-slate-200 text-slate-800 rounded-tr-none" 
+                          : "bg-[#64C4D1] text-white rounded-tl-none shadow-md"
                       )}
                     >
                       {msg.text}
@@ -234,7 +234,7 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: i * 0.1 }}
                           onClick={opt.action}
-                          className="w-full text-left p-3 rounded-xl border border-brand-accent/30 bg-white hover:bg-brand-accent/10 hover:border-brand-accent text-brand-primary text-sm transition-all flex items-center justify-between group"
+                          className="w-full text-left p-3 rounded-xl border border-white/10 bg-white hover:bg-white/90 text-[#1D1D1D] text-sm transition-all flex items-center justify-between group"
                         >
                           {opt.label}
                           <ChevronRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -255,7 +255,7 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
             </div>
 
             {/* Input Area */}
-            <div className="p-4 bg-white border-t border-slate-100">
+            <div className="p-4 bg-[#1D1D1D] border-t border-white/10">
               {formStep && formStep !== 'done' ? (
                 <form onSubmit={handleFormSubmit} className="flex gap-2">
                   <input
@@ -266,7 +266,7 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
                       formStep === 'email' ? "Enter your email..." :
                       "Enter your phone number..."
                     }
-                    className="flex-1 p-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+                    className="flex-1 p-2 border border-white/10 bg-white/5 text-white rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
                   />
                   <button
                     type="submit"

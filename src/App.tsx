@@ -28,8 +28,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white font-serif text-2xl">S</div>
             <div>
-              <h1 className="font-serif text-xl font-bold text-brand-primary tracking-tight">Studley Dental</h1>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-brand-accent font-semibold">And Implant Clinic</p>
+              <h1 className="font-serif text-xl font-bold text-brand-primary tracking-tight">Studley Dental & Implant clinic</h1>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -125,7 +124,7 @@ export default function App() {
             <div className="col-span-1 md:col-span-2 space-y-6">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-primary font-serif text-2xl">S</div>
-                <h2 className="font-serif text-2xl font-bold tracking-tight">Studley Dental</h2>
+                <h2 className="font-serif text-2xl font-bold tracking-tight">Studley Dental & Implant clinic</h2>
               </div>
               <p className="text-white/60 max-w-sm leading-relaxed">
                 Providing excellence in private dentistry for Studley and the surrounding areas. Your smile is our priority.
