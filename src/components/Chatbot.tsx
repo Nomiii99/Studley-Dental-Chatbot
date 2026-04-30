@@ -218,7 +218,7 @@ export default function Chatbot({ defaultOpen = false, hideToggle = false, isEmb
                         "p-3 rounded-2xl text-sm shadow-sm",
                         msg.sender === 'user' 
                           ? "bg-slate-200 text-slate-800 rounded-tr-none" 
-                          : "bg-[#64C4D1] text-white rounded-tl-none shadow-md"
+                          : "bg-brand-primary text-white rounded-tl-none shadow-md"
                       )}
                     >
                       {msg.text}
